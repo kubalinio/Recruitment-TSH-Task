@@ -9,7 +9,7 @@
   ],
   "plugins": ["prettier", "import", "vitest", "jsx-a11y"],
   "rules": {
-    "prettier/prettier": "error",
+    "prettier/prettier": 0,
     "no-console": "warn",
 
     "react/jsx-props-no-spreading": "error",

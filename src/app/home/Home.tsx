@@ -2,12 +2,12 @@ import { Fragment } from 'react';
 
 import { AppRoute } from 'routing/AppRoute.enum';
 import { AppLocale } from 'context/locale/AppLocale.enum';
-import { useLocale } from 'hooks/useLocale/useLocale';
-import { useAuth } from 'hooks/useAuth/useAuth';
-import { useUsers } from 'hooks/useUsers/useUsers';
-import { useNavigate } from 'hooks/useNavigate/useNavigate';
-import { Translation } from 'ui/translation/Translation';
-import { LocationInfo } from 'ui/locationInfo/LocationInfo';
+import { useLocale } from 'app/shared/hooks/useLocale/useLocale';
+import { useAuth } from 'app/shared/hooks/useAuth/useAuth';
+import { useUsers } from 'app/shared/hooks/useUsers/useUsers';
+import { useNavigate } from 'app/shared/hooks/useNavigate/useNavigate';
+import { Translation } from 'app/shared/ui/translation/Translation';
+import { LocationInfo } from 'app/shared/ui/locationInfo/LocationInfo';
 
 export const Home = () => {
   const { locale, setLocale } = useLocale();

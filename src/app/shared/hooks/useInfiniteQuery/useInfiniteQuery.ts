@@ -7,7 +7,7 @@ import {
   UseInfiniteQueryResult,
 } from '@tanstack/react-query';
 
-import { useApiClient } from 'hooks/useApiClient/useApiClient';
+import { useApiClient } from 'app/shared/hooks/useApiClient/useApiClient';
 import { AxiosInfiniteQueriesType, queries } from 'api/actions';
 import { DataForQuery, GetQueryParams } from 'api/types/types';
 

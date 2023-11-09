@@ -1,6 +1,6 @@
 import { NavigateOptions as ReactNavigateOptions, useNavigate as ReactUseNavigate } from 'react-router-dom';
 
-import { HasParams, NavigateOptions, PathParams } from 'types/params-utils';
+import { HasParams, NavigateOptions, PathParams } from 'app/shared/types/params-utils';
 
 export const useNavigate = () => {
   const navigate = ReactUseNavigate();

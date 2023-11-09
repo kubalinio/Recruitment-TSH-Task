@@ -1,4 +1,4 @@
-import { LocationInfo } from 'ui/locationInfo/LocationInfo';
+import { LocationInfo } from 'app/shared/ui/locationInfo/LocationInfo';
 
 export const About = () => {
   return (

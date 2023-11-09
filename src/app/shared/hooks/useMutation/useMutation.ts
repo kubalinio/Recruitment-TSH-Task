@@ -5,7 +5,7 @@ import {
   MutationKey,
 } from '@tanstack/react-query';
 
-import { useApiClient } from 'hooks/useApiClient/useApiClient';
+import { useApiClient } from 'app/shared/hooks/useApiClient/useApiClient';
 import { AxiosMutationsType, mutations } from 'api/actions';
 
 import { DataForMutation, GetMutationParams } from './useMutation.types';

@@ -1,4 +1,4 @@
-import { useLocale } from 'hooks/useLocale/useLocale';
+import { useLocale } from 'app/shared/hooks/useLocale/useLocale';
 import { AppMessages } from 'i18n/messages';
 
 import { TranslationProps } from './Translation.types';

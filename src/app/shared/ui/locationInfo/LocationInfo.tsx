@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 
-import { CodeBlock } from 'ui/codeBlock/CodeBlock';
+import { CodeBlock } from 'app/shared/ui/codeBlock/CodeBlock';
 
 export const LocationInfo = () => {
   const location = useLocation();

@@ -1,8 +1,8 @@
 import { Fragment } from 'react';
 import { useSearchParams } from 'react-router-dom';
 
-import { CodeBlock } from 'ui/codeBlock/CodeBlock';
-import { useQuery } from 'hooks/useQuery/useQuery';
+import { CodeBlock } from 'app/shared/ui/codeBlock/CodeBlock';
+import { useQuery } from 'app/shared/hooks/useQuery/useQuery';
 
 type SortType = 'asc' | 'desc';
 

@@ -3,7 +3,7 @@ import { QueryKey, UseQueryResult, UseQueryOptions, useQuery as useRQQuery } fro
 import { useApiClient } from '../useApiClient/useApiClient';
 import { AxiosQueriesType, queries } from 'api/actions';
 import { DataForQuery, GetQueryParams } from 'api/types/types';
-import { parseQueryKey } from 'utils/parseQueryKey';
+import { parseQueryKey } from 'app/shared/utils/parseQueryKey';
 
 export const useQuery = <Key extends keyof AxiosQueriesType, TError = unknown>(
   query: Key,

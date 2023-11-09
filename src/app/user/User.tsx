@@ -1,6 +1,6 @@
-import { useParams } from 'hooks/useParams/useParams';
+import { useParams } from 'app/shared/hooks/useParams/useParams';
 import { AppRoute } from 'routing/AppRoute.enum';
-import { CodeBlock } from 'ui/codeBlock/CodeBlock';
+import { CodeBlock } from 'app/shared/ui/codeBlock/CodeBlock';
 
 export const User = () => {
   const params = useParams<AppRoute.user>();

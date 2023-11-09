@@ -1,7 +1,7 @@
 import { useParams as ReactUseParams } from 'react-router-dom';
 
-import { PathParams } from 'types/params-utils';
-import { Simplify } from 'types/simplify';
+import { PathParams } from 'app/shared/types/params-utils';
+import { Simplify } from 'app/shared/types/simplify';
 
 function assertParamsAreValid<Path extends string>(
   params: ReturnType<typeof ReactUseParams<PathParams<Path>>>,
