@@ -1,9 +1,8 @@
 import './wdyr';
-import React from 'react';
 import { createRoot } from 'react-dom/client';
 import * as Sentry from '@sentry/browser';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import 'assets/styles/main.css';
+import 'app/shared/styles/globals.css';
 
 import { AppProviders } from 'providers/AppProviders';
 import { AppRoutes } from 'routing/AppRoutes';

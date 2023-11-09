@@ -1,16 +1,17 @@
-import { Outlet } from 'react-router-dom';
+import { ReactNode } from 'react';
 
-import './Layout.css';
 import { Header } from './containers/Header';
-import { Navigation } from './containers/Navigation';
 
-export const DefaultLayout = () => {
+interface DefaultLayoutProps {
+    children: ReactNode
+}
+
+export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     return (
-        <body className="app">
+        <body className="text-sm">
             <Header />
-            <Navigation />
-            <main className="app__main">
-                <Outlet />
+            <main className="">
+                {children}
             </main>
         </body>
     );

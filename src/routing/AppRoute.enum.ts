@@ -1,7 +1,7 @@
 export enum AppRoute {
   home = '/',
-  about = '/about',
-  help = '/help',
-  user = '/users/:id',
-  users = '/users',
+  help = '/login',
+  products = '/products',
+  // user = '/users/:id',
+  // users = '/users',
 }

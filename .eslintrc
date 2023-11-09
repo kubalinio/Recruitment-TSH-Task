@@ -12,7 +12,7 @@
     "prettier/prettier": 0,
     "no-console": "warn",
 
-    "react/jsx-props-no-spreading": "error",
+    "react/jsx-props-no-spreading": "off",
     "react-hooks/exhaustive-deps": "warn",
     "react/display-name": "off",
     "react/react-in-jsx-scope": "off",
