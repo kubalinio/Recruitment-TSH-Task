@@ -1,6 +1,6 @@
 import type { PrimitiveType } from 'intl-messageformat/src/formatters';
 
-import { AppLocale } from 'context/locale/AppLocale.enum';
+import { AppLocale } from 'app/shared/context/locale/AppLocale.enum';
 
 import enMessages from './data/en.json';
 import plMessages from './data/pl.json';

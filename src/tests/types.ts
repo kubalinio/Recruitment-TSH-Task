@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { AppRoute } from 'routing/AppRoute.enum';
+import { AppRoute } from 'app/shared/routing/AppRoute.enum';
 
 export type RouterConfig =
   | {

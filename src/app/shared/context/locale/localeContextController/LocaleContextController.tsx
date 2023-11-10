@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { IntlProvider } from 'react-intl';
 
 import { AppLocale } from '../AppLocale.enum';
-import { defaultLocale } from '../defaultLocale';
+import { defaultLocale } from '../../../../../context/locale/defaultLocale';
 import { translations } from 'i18n/messages';
 import { LocaleContext } from '../localeContext/LocaleContext';
 

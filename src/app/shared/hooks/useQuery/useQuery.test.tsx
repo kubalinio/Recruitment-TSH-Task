@@ -1,5 +1,5 @@
 import axiosClient from 'api/axios';
-import { AppProviders } from 'providers/AppProviders';
+import { AppProviders } from 'app/shared/providers/AppProviders';
 import { renderHook, waitFor } from 'tests';
 
 import { useQuery } from './useQuery';

@@ -4,12 +4,12 @@ import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { useState } from 'react';
 import { IntlProvider } from 'react-intl';
 import { MemoryRouter as Router, Route, Routes } from 'react-router-dom';
-
 import { ApiClientContextController } from 'context/apiClient/apiClientContextController/ApiClientContextController';
-import { AuthContext } from 'context/auth/authContext/AuthContext';
-import { AppLocale } from 'context/locale/AppLocale.enum';
 import { defaultLocale } from 'context/locale/defaultLocale';
-import { LocaleContext } from 'context/locale/localeContext/LocaleContext';
+
+import { AuthContext } from 'app/shared/context/auth/authContext/AuthContext';
+import { AppLocale } from 'app/shared/context/locale/AppLocale.enum';
+import { LocaleContext } from 'app/shared/context/locale/localeContext/LocaleContext';
 
 import { ExtraRenderOptions, WrapperProps } from './types';
 
@@ -52,7 +52,7 @@ const _Wrapper = ({ children, routerConfig = { withRouter: false } }: WrapperPro
           user: undefined,
         }}
       >
-        <IntlProvider onError={() => {}} defaultLocale={defaultLocale} locale={locale}>
+        <IntlProvider onError={() => { }} defaultLocale={defaultLocale} locale={locale}>
           <LocaleContext.Provider value={{ defaultLocale, locale, setLocale }}>
             <RouterForTests routerConfig={routerConfig}>{children}</RouterForTests>
           </LocaleContext.Provider>

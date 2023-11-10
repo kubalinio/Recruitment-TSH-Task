@@ -1,6 +1,6 @@
 import { AxiosRequestHeaders, InternalAxiosRequestConfig } from 'axios';
 
-import { authStorage } from 'context/auth/authStorage/AuthStorage';
+import { authStorage } from 'app/shared/context/auth/authStorage/AuthStorage';
 
 export const requestSuccessInterceptor = (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
   if (authStorage.accessToken) {

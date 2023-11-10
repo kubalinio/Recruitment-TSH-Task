@@ -2,7 +2,7 @@ import { useContext, useCallback, useMemo } from 'react';
 import { useIntl } from 'react-intl';
 
 import type { TranslateFn } from 'i18n/messages';
-import { LocaleContext } from 'context/locale/localeContext/LocaleContext';
+import { LocaleContext } from 'app/shared/context/locale/localeContext/LocaleContext';
 
 import { UseLocaleReturnType } from './useLocale.types';
 

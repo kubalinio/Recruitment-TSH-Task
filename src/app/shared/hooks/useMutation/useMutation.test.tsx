@@ -1,5 +1,5 @@
 import axiosClient from 'api/axios';
-import { AppProviders } from 'providers/AppProviders';
+import { AppProviders } from 'app/shared/providers/AppProviders';
 import { act, renderHook, waitFor } from 'tests';
 
 import { useMutation } from './useMutation';

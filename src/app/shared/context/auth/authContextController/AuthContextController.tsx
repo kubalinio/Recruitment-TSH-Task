@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useReducer } from 'react';
 
 import { useMutation } from 'app/shared/hooks/useMutation/useMutation';
-import { useUser } from '../../../app/shared/hooks/useUser/useUser';
+import { useUser } from '../../../hooks/useUser/useUser';
 import { resetTokens, setTokens } from '../authActionCreators/authActionCreators';
 import { AuthContext } from '../authContext/AuthContext';
 import { AuthContextValue } from '../authContext/AuthContext.types';

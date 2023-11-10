@@ -1,5 +1,5 @@
 import { act, renderHook } from 'tests';
-import { AppProviders } from 'providers/AppProviders';
+import { AppProviders } from 'app/shared/providers/AppProviders';
 import axiosClient from 'api/axios';
 
 import { useAuth } from './useAuth';

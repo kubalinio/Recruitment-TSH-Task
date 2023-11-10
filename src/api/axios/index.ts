@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-import { requestSuccessInterceptor } from 'context/apiClient/apiClientContextController/interceptors/requestInterceptors';
+import { requestSuccessInterceptor } from 'app/shared/context/apiClient/apiClientContextController/interceptors/requestInterceptors';
 import {
   responseFailureInterceptor,
   responseSuccessInterceptor,
-} from 'context/apiClient/apiClientContextController/interceptors/responseInterceptors';
+} from 'app/shared/context/apiClient/apiClientContextController/interceptors/responseInterceptors';
 
 export const BASE_URL = import.meta.env.VITE_API_URL;
 

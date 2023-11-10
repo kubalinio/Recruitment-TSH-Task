@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 
-import { DefaultLayout } from 'app/layout/DefaultLayout';
+import { DefaultLayout } from 'app/shared/layouts/DefaultLayout';
 import { Products } from 'app/products/Products';
 
 import { AppRoute } from './AppRoute.enum';
@@ -18,7 +18,7 @@ export const AppRoutes = () => (
   // </Routes>
 
   <Routes>
-    <Route path={AppRoute.products} element={<DefaultLayout><Products /></DefaultLayout>} />
+    <Route path={AppRoute.home} element={<DefaultLayout><Products /></DefaultLayout>} />
   </Routes>
 
 );

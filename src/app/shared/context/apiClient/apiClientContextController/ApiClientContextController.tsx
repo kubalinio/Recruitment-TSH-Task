@@ -1,8 +1,8 @@
 import { useMemo } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { ApiClientContext } from 'context/apiClient/apiClientContext/ApiClientContext';
-import { ApiClientContextValue } from 'context/apiClient/apiClientContext/ApiClientContext.types';
+import { ApiClientContext } from 'app/shared/context/apiClient/apiClientContext/ApiClientContext';
+import { ApiClientContextValue } from 'app/shared/context/apiClient/apiClientContext/ApiClientContext.types';
 import axiosClient from 'api/axios';
 
 import { ApiClientControllerProps } from './ApiClientContextController.types';

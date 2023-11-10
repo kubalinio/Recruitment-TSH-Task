@@ -4,8 +4,8 @@ import * as Sentry from '@sentry/browser';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import 'app/shared/styles/globals.css';
 
-import { AppProviders } from 'providers/AppProviders';
-import { AppRoutes } from 'routing/AppRoutes';
+import { AppProviders } from 'app/shared/providers/AppProviders';
+import { AppRoutes } from 'app/shared/routing/AppRoutes';
 
 const openReactQueryDevtools = import.meta.env.DEV;
 

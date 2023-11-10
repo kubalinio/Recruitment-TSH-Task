@@ -1,7 +1,7 @@
 import type { IntlShape } from 'react-intl';
 
 import type { TranslateFn } from 'i18n/messages';
-import type { LocaleContextValueType } from 'context/locale/localeContext/LocaleContext.types';
+import type { LocaleContextValueType } from 'app/shared/context/locale/localeContext/LocaleContext.types';
 
 export type WithTranslateFn = {
   t: TranslateFn;
