@@ -7,10 +7,10 @@
     "config": "tailwind.config.js",
     "css": "app/shared/styles/globals.css",
     "baseColor": "gray",
-    "cssVariables": true
+    "cssVariables": false
   },
   "aliases": {
-    "components": "app/shared/ui",
+    "components": "app/shared",
     "utils": "app/shared/utils"
   }
 }
