@@ -1,8 +1,11 @@
-import { Button } from 'app/shared/ui'
+import { useQuery } from 'app/shared/hooks'
+
 export function Products() {
+    const { data } = useQuery('getProductsList', {})
+    console.log(data)
     return (
         <section className=''>
-            <Button>Button</Button>
+            {data?.items.map(item => item.name)}
         </section>
     )
 }

@@ -8,11 +8,11 @@ interface DefaultLayoutProps {
 
 export const DefaultLayout = ({ children }: DefaultLayoutProps) => {
     return (
-        <body className="text-sm">
+        <>
             <Header />
             <main className="">
                 {children}
             </main>
-        </body>
+        </>
     );
 };

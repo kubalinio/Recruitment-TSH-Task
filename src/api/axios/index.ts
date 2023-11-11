@@ -10,9 +10,13 @@ export const BASE_URL = import.meta.env.VITE_API_URL;
 
 const axiosClient = axios.create({
   headers: {
+    Connection: 'Keep-Alive',
+    Accept: 'application/json',
+    'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
   },
   baseURL: BASE_URL,
+  withCredentials: false,
 });
 
 axiosClient.interceptors.request.use(requestSuccessInterceptor);

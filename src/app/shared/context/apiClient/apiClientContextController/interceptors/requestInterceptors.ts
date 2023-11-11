@@ -6,7 +6,7 @@ export const requestSuccessInterceptor = (config: InternalAxiosRequestConfig): I
   if (authStorage.accessToken) {
     return {
       ...config,
-      withCredentials: true,
+      withCredentials: false,
       headers: {
         ...config.headers,
         Authorization: `Bearer ${authStorage.accessToken}`,
