@@ -36,6 +36,7 @@ module.exports = {
         },
         disabled: {
           DEFAULT: "hsl(var(--disabled))",
+          foreground: "hsl(var(--disabled-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
