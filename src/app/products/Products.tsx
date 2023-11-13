@@ -1,9 +1,12 @@
 import { useSearchParams } from 'react-router-dom'
 
 import { useQuery } from 'app/shared/hooks'
+import { Spinner } from 'app/shared/components/Spinner';
 
 import { ProductCard } from './components/ProductCard'
 import { Pagination } from './components/Pagination';
+import { NotFoundProducts } from './components/NotFoundProducts';
+import { ApiError } from './components/ApiError';
 
 export function Products() {
     const [searchParams, setSearchParams] = useSearchParams()
@@ -20,27 +23,31 @@ export function Products() {
         });
     }
 
-    const { data } = useQuery('getProductsList',
+    const { data, isLoadingAndEnabled, isError } = useQuery('getProductsList',
         {
             page: page || undefined,
             active: active || undefined,
             promo: promo || undefined,
             search: search || undefined
         })
+
+
+    if (!isError) return <ApiError />
+
+    if (isLoadingAndEnabled) return <Spinner />
+
     return (
         <section className='flex flex-wrap justify-center px-6 pt-6 pb-10 mx-auto lg:max-w-7xl xl:justify-center gap-y-8 gap-x-5 lg:py-14'>
-            {/* Here Suspense */}
             {data && (data.items.length > 0) ? (
                 <>
-                    {data?.items.map(product => (
+                    {data.items.map(product => (
                         <ProductCard key={product.id} product={product} />
                     ))}
 
                     <Pagination meta={data.meta} handleCurrentPage={handleCurrentPage} />
                 </>
-            ) : <div>No Items</div>
+            ) : <NotFoundProducts />
             }
-
         </section>
     )
 }

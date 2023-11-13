@@ -25,6 +25,14 @@ export function SearchBar() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [debouncedSearchValue])
 
+    useEffect(() => {
+        if (searchParams.size === 0) {
+            setActiveCheck('false')
+            setPromoCheck('false')
+            setSearchValue('')
+        }
+    }, [searchParams])
+
     const sortProducts = async (data: { promo: string } | { active: string }) => {
         if (data) {
             setSearchParams((prev) => {
