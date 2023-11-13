@@ -11,7 +11,7 @@ const badgeVariants = cva(
         default:
           "border-transparent bg-gray-900 text-gray-50 hover:bg-gray-900/80",
         promo:
-          "border-transparent bg-secondary px-4 py-1 text-white text-sm",
+          "border-transparent bg-secondary px-4 py-1 text-white text-sm pointer-events-none",
 
       },
     },

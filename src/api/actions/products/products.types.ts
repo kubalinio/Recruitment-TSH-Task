@@ -8,7 +8,7 @@ export type Product = {
   id: string;
 };
 
-export type ProductMeta = {
+export type ProductsMeta = {
   currentPage: number;
   itemCount: number;
   itemsPerPage: number;
@@ -18,7 +18,7 @@ export type ProductMeta = {
 
 export type GetProductsResponse = {
   items: Product[];
-  meta: ProductMeta;
+  meta: ProductsMeta;
 };
 
 export type GetProductsListArgs = {
