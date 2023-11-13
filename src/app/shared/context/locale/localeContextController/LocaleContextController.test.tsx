@@ -2,8 +2,8 @@ import { ReactNode, useContext } from 'react';
 
 import { act, render, screen } from 'tests';
 import { AppLocale } from '../AppLocale.enum';
-import { defaultLocale } from '../../../../../context/locale/defaultLocale';
 import { LocaleContext } from '../localeContext/LocaleContext';
+import { defaultLocale } from '../defaultLocale';
 
 import { LocaleContextController } from './LocaleContextController';
 

@@ -13,7 +13,7 @@ export function Pagination({
     const { totalPages, currentPage } = meta
 
     const createBtn = (i: number) => (
-        <button onClick={() => handleCurrentPage(i.toString())} disabled={currentPage === i} className={cn('font-semibold p-1', {
+        <button key={i} onClick={() => handleCurrentPage(i.toString())} disabled={currentPage === i} className={cn('font-semibold p-1', {
             'text-accent': currentPage === i
         })}>
             {i}
@@ -49,7 +49,7 @@ export function Pagination({
             break;
     }
     return (
-        <div className='flex items-center justify-center w-full gap-x-8'>
+        <div data-testid="pagination" className='flex items-center justify-center w-full gap-x-8'>
             <button onClick={() => handleCurrentPage('1')} disabled={currentPage === 1} className='disabled:text-disabled'>
                 First
             </button>

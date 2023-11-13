@@ -4,12 +4,13 @@ import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { useState } from 'react';
 import { IntlProvider } from 'react-intl';
 import { MemoryRouter as Router, Route, Routes } from 'react-router-dom';
-import { ApiClientContextController } from 'context/apiClient/apiClientContextController/ApiClientContextController';
-import { defaultLocale } from 'context/locale/defaultLocale';
+
 
 import { AuthContext } from 'app/shared/context/auth/authContext/AuthContext';
 import { AppLocale } from 'app/shared/context/locale/AppLocale.enum';
 import { LocaleContext } from 'app/shared/context/locale/localeContext/LocaleContext';
+import { ApiClientContextController } from 'app/shared/context/apiClient/apiClientContextController/ApiClientContextController';
+import { defaultLocale } from 'app/shared/context/locale/defaultLocale';
 
 import { ExtraRenderOptions, WrapperProps } from './types';
 

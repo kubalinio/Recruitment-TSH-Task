@@ -18,7 +18,7 @@ export function ProductCard({
     }
 }: Props) {
     return (
-        <Card className='w-[327px] lg:w-[293px] h-[400px] flex flex-col justify-between '>
+        <Card data-testid="product-card" className='w-[327px] lg:w-[293px] h-[400px] flex flex-col justify-between '>
             <CardHeader className='relative w-full max-h-[170px] overflow-hidden rounded-t-lg'>
                 <img src={image} alt={name} className={cn('object-cover w-full h-full', {
                     'grayscale': !active
@@ -52,11 +52,11 @@ export function ProductCard({
                             <img src={image} alt={name} className={cn('object-cover w-full h-full')} />
                         </DialogHeader>
 
-                        <DialogTitle className='px-6 mb-2'>
+                        <DialogTitle data-testid="modal-product-title" className='px-6 mb-2'>
                             {name}
                         </DialogTitle>
 
-                        <DialogDescription className='px-6 pb-6'>
+                        <DialogDescription data-testid="modal-product-desc" className='px-6 pb-6'>
                             {description}
                         </DialogDescription>
                     </DialogContent>
