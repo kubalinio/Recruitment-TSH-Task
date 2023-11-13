@@ -3,10 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import { useQuery } from 'app/shared/hooks'
 import { Spinner } from 'app/shared/components/Spinner';
 
-import { ProductCard } from './components/ProductCard'
-import { Pagination } from './components/Pagination';
-import { NotFoundProducts } from './components/NotFoundProducts';
-import { ApiError } from './components/ApiError';
+import { ApiError, NotFoundProducts, Pagination, ProductCard } from './components';
 
 export function Products() {
     const [searchParams, setSearchParams] = useSearchParams()
@@ -32,7 +29,7 @@ export function Products() {
         })
 
 
-    if (!isError) return <ApiError />
+    if (isError) return <ApiError />
 
     if (isLoadingAndEnabled) return <Spinner />
 

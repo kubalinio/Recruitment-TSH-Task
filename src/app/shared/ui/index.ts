@@ -6,3 +6,4 @@ export * from './Input/Input';
 export * from './Card/Card';
 export * from './Rating/Rating';
 export * from './Badge/Badge';
+export * from './Dialog/Dialog';

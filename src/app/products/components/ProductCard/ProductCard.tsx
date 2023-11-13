@@ -1,11 +1,7 @@
-import { Link } from 'react-router-dom'
-
 import { Product } from 'api/actions/products/products.types'
-import { Badge, Rating, buttonVariants } from 'app/shared/ui'
+import { Badge, Button, Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, Rating, } from 'app/shared/ui'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from 'app/shared/ui'
 import { cn } from 'app/shared/utils/cn'
-
-
 
 type Props = {
     product: Product
@@ -13,7 +9,6 @@ type Props = {
 
 export function ProductCard({
     product: {
-        id,
         active,
         description,
         image,
@@ -31,6 +26,7 @@ export function ProductCard({
 
                 {promo && <Badge variant={'promo'} className='absolute left-0 top-4'>Promo</Badge>}
             </CardHeader>
+
             <CardContent className='px-4'>
                 <CardTitle className='mb-2 line-clamp-1' title={name}>
                     {name}
@@ -40,16 +36,31 @@ export function ProductCard({
                     {description}
                 </CardDescription>
             </CardContent>
+
             <CardFooter className='flex flex-col justify-start px-4 pb-6'>
                 <Rating className='mb-4' rating={rating} />
 
-                <Link aria-disabled={!active} className={buttonVariants({
-                    variant: 'primary'
-                })}
-                    to={`/products/${id}`}
-                >
-                    {active ? 'Show Details' : 'Unavailable'}
-                </Link>
+                <Dialog>
+                    <DialogTrigger asChild>
+                        <Button variant={'primary'} disabled={!active}>
+                            {active ? 'Show Details' : 'Unavailable'}
+                        </Button>
+                    </DialogTrigger>
+
+                    <DialogContent className='border-none rounded-lg p-0 w-80 md:w-auto md:max-w-[600px]'>
+                        <DialogHeader className='w-full h-[354px] overflow-hidden rounded-t-lg p-0 mb-6'>
+                            <img src={image} alt={name} className={cn('object-cover w-full h-full')} />
+                        </DialogHeader>
+
+                        <DialogTitle className='px-6 mb-2'>
+                            {name}
+                        </DialogTitle>
+
+                        <DialogDescription className='px-6 pb-6'>
+                            {description}
+                        </DialogDescription>
+                    </DialogContent>
+                </Dialog>
             </CardFooter>
         </Card >
     )
