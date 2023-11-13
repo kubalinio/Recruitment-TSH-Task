@@ -23,7 +23,7 @@ export function ProductCard({
     }
 }: Props) {
     return (
-        <Card className='w-[327px] lg:w-[288px] h-[400px] flex flex-col justify-between '>
+        <Card className='w-[327px] lg:w-[293px] h-[400px] flex flex-col justify-between '>
             <CardHeader className='relative w-full max-h-[170px] overflow-hidden rounded-t-lg'>
                 <img src={image} alt={name} className={cn('object-cover w-full h-full', {
                     'grayscale': !active
@@ -43,9 +43,8 @@ export function ProductCard({
             <CardFooter className='flex flex-col justify-start px-4 pb-6'>
                 <Rating className='mb-4' rating={rating} />
 
-                <Link className={buttonVariants({
-                    variant: 'primary',
-                    className: !active ? 'pointer-events-none bg-disabled' : ''
+                <Link aria-disabled={!active} className={buttonVariants({
+                    variant: 'primary'
                 })}
                     to={`/products/${id}`}
                 >

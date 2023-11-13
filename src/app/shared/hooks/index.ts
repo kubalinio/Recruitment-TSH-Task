@@ -6,3 +6,4 @@ export * from './useMutation/useMutation';
 export * from './useNavigate/useNavigate';
 export * from './useParams/useParams';
 export * from './useQuery/useQuery';
+export * from './useDebounce/useDebounce';

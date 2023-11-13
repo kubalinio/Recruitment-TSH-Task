@@ -23,4 +23,8 @@ export type GetProductsResponse = {
 
 export type GetProductsListArgs = {
   page?: string;
+  promo?: string;
+  active?: string;
+  search?: string;
+  limit?: number;
 };

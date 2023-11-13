@@ -10,8 +10,8 @@ import {
 export const productsQueries = {
   getProductsList:
     (client: AxiosInstance) =>
-    async ({ page = '1' }: GetProductsListArgs) => {
-      const queryParams = stringify({ page, limit: 8 }, { addQueryPrefix: true });
+    async ({ page, active, promo, search }: GetProductsListArgs) => {
+      const queryParams = stringify({ page, active, promo, limit: 8, search }, { addQueryPrefix: true });
       return (await client.get<GetProductsResponse>(`/products${queryParams}`)).data;
       // return (await client.get<GetProductsResponse>(`/products`)).data;
     },
