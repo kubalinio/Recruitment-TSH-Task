@@ -1,7 +1,3 @@
-import React from 'react'
-
-
-
 export function ApiError() {
     return (
         <div className='w-full py-6 text-center'>
