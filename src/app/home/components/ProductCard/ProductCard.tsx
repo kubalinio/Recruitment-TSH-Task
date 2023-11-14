@@ -1,5 +1,7 @@
+import { useState } from 'react'
+
 import { Product } from 'api/actions/products/products.types'
-import { Badge, Button, Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, Rating, } from 'app/shared/ui'
+import { Badge, Button, Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger, Rating, Skeleton, } from 'app/shared/ui'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from 'app/shared/ui'
 import { cn } from 'app/shared/utils/cn'
 
@@ -17,14 +19,21 @@ export function ProductCard({
         rating
     }
 }: Props) {
+    const [isImageLoaded, setIsImageLoaded] = useState(false)
+
     return (
         <Card data-testid="product-card" className='w-[327px] lg:w-[293px] h-[400px] flex flex-col justify-between '>
             <CardHeader className='relative w-full max-h-[170px] overflow-hidden rounded-t-lg'>
-                <img src={image} alt={name} className={cn('object-cover w-full h-full', {
-                    'grayscale': !active
-                })} />
 
-                {promo && <Badge variant={'promo'} className='absolute left-0 top-4'>Promo</Badge>}
+                {!isImageLoaded && <Skeleton className='w-full h-[170px]' />}
+
+                <img src={image} alt={name} className={cn('object-cover w-full h-full', {
+                    'grayscale': !active,
+                    'hidden': !isImageLoaded
+                })} onLoad={() => setIsImageLoaded(true)} />
+
+                {(promo && isImageLoaded) && <Badge variant={'promo'} className='absolute left-0 top-4'>Promo</Badge>}
+
             </CardHeader>
 
             <CardContent className='px-4'>

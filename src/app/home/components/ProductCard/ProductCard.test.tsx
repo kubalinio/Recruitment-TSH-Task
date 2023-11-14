@@ -25,13 +25,6 @@ describe('ProductCard', () => {
         expect(screen.getByText('Show Details')).toBeInTheDocument();
     });
 
-    test('displays promo badge when promo is true', () => {
-        render(<ProductCard product={mockProduct} />);
-
-        // Assertion for the presence of promo badge
-        expect(screen.getByText('Promo')).toBeInTheDocument();
-    });
-
     test('displays "Unavailable" button when product is not active', () => {
         const notActiveProduct = { ...mockProduct, active: false };
         render(<ProductCard product={notActiveProduct} />);

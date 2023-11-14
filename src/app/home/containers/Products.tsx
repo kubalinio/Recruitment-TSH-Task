@@ -42,5 +42,7 @@ export function Products() {
                 <Pagination meta={data.meta} handleCurrentPage={handleCurrentPage} />
             </>
         ) : <NotFoundProducts />
+
+
     )
 }
