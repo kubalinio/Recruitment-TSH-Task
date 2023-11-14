@@ -14,7 +14,7 @@ const mockProduct: Product = {
 };
 
 describe('ProductCard', () => {
-    it('renders product card correctly', () => {
+    test('renders product card correctly', () => {
         render(<ProductCard product={mockProduct} />);
 
         // Assertions for the rendered content
@@ -25,14 +25,14 @@ describe('ProductCard', () => {
         expect(screen.getByText('Show Details')).toBeInTheDocument();
     });
 
-    it('displays promo badge when promo is true', () => {
+    test('displays promo badge when promo is true', () => {
         render(<ProductCard product={mockProduct} />);
 
         // Assertion for the presence of promo badge
         expect(screen.getByText('Promo')).toBeInTheDocument();
     });
 
-    it('displays "Unavailable" button when product is not active', () => {
+    test('displays "Unavailable" button when product is not active', () => {
         const notActiveProduct = { ...mockProduct, active: false };
         render(<ProductCard product={notActiveProduct} />);
 
@@ -40,7 +40,7 @@ describe('ProductCard', () => {
         expect(screen.getByText('Unavailable')).toBeInTheDocument();
     });
 
-    it('opens the dialog when "Show Details" button is clicked', () => {
+    test('opens the dialog when "Show Details" button is clicked', () => {
         render(<ProductCard product={mockProduct} />);
 
         // Click on the "Show Details" button to trigger the dialog

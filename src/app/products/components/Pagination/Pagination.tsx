@@ -50,13 +50,13 @@ export function Pagination({
     }
     return (
         <div data-testid="pagination" className='flex items-center justify-center w-full gap-x-8'>
-            <button onClick={() => handleCurrentPage('1')} disabled={currentPage === 1} className='disabled:text-disabled'>
+            <button data-testid="pag-first-button" onClick={() => handleCurrentPage('1')} disabled={currentPage === 1} className='disabled:text-disabled'>
                 First
             </button>
             <div className='flex items-center gap-x-2'>
                 {pagesToDisplay}
             </div>
-            <button onClick={() => handleCurrentPage(totalPages.toString())} disabled={currentPage === totalPages} className='disabled:text-disabled'>
+            <button data-testid="pag-last-button" onClick={() => handleCurrentPage(totalPages.toString())} disabled={currentPage === totalPages} className='disabled:text-disabled'>
                 Last
             </button>
         </div>
