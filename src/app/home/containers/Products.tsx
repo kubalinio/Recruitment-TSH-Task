@@ -2,8 +2,7 @@ import { useSearchParams } from 'react-router-dom'
 
 import { useQuery } from 'app/shared/hooks'
 import { Spinner } from 'app/shared/components/Spinner';
-
-import { ApiError, NotFoundProducts, Pagination, ProductCard } from './components';
+import { ApiError, NotFoundProducts, Pagination, ProductCard } from '../components';
 
 export function Products() {
     const [searchParams, setSearchParams] = useSearchParams()
@@ -34,17 +33,14 @@ export function Products() {
     if (isLoadingAndEnabled) return <Spinner />
 
     return (
-        <section className='flex flex-wrap justify-center px-6 pt-6 pb-10 mx-auto lg:max-w-7xl xl:justify-center gap-y-8 gap-x-5 lg:py-14'>
-            {data && (data.items.length > 0) ? (
-                <>
-                    {data.items.map(product => (
-                        <ProductCard key={product.id} product={product} />
-                    ))}
+        data && (data.items.length > 0) ? (
+            <>
+                {data.items.map(product => (
+                    <ProductCard key={product.id} product={product} />
+                ))}
 
-                    <Pagination meta={data.meta} handleCurrentPage={handleCurrentPage} />
-                </>
-            ) : <NotFoundProducts />
-            }
-        </section>
+                <Pagination meta={data.meta} handleCurrentPage={handleCurrentPage} />
+            </>
+        ) : <NotFoundProducts />
     )
 }
