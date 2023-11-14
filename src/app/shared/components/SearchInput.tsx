@@ -11,9 +11,9 @@ interface SearchInputProps {
 export function SearchInput({ className, onChange, value }: SearchInputProps) {
     return (
         <div className={cn('relative', className)}>
-            <Input value={value} onChange={(e) => onChange(e.target.value)} variant='search' className='px-2 transition-all duration-200 border border-gray-500 rounded-md cursor-pointer hover:border-accent focus:border-accent active:border-accent' placeholder='Search' />
+            <Input value={value} onChange={(e) => onChange(e.target.value)} variant='search' className='px-2 transition-all duration-200 border border-gray-500 rounded-md cursor-pointer peer hover:border-accent focus:border-accent active:border-accent' placeholder='Search' />
 
-            <SearchIcon className='absolute -translate-y-1/2 pointer-events-none right-2 top-1/2' />
+            <SearchIcon className='absolute -translate-y-1/2 pointer-events-none right-2 top-1/2 peer-focus:[&>svg>g>path]:fill-accent transition' />
         </div>
     )
 }

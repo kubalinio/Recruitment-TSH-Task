@@ -13,7 +13,6 @@ export const productsQueries = {
     async ({ page, active, promo, search }: GetProductsListArgs) => {
       const queryParams = stringify({ page, active, promo, limit: 8, search }, { addQueryPrefix: true });
       return (await client.get<GetProductsResponse>(`/products${queryParams}`)).data;
-      // return (await client.get<GetProductsResponse>(`/products`)).data;
     },
   // QUERY_FUNCTIONS_SETUP
 };

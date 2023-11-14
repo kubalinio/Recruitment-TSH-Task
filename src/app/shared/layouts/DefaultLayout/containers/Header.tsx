@@ -10,7 +10,7 @@ export function Header() {
                 <h1 className="w-1/2 text-2xl font-semibold md:w-auto md:mr-[105px]">join.tsh.io</h1>
             </Link>
 
-            <Link to={'/login'} className={buttonVariants({ variant: "outline", className: "max-w-[88px] md:w-1/4 md:order-3 ml-auto flex-none p-0" })}>
+            <Link to={'/'} className={buttonVariants({ variant: "outline", className: "max-w-[88px] md:w-1/4 md:order-3 ml-auto flex-none p-0" })}>
                 Log in
             </Link>
 

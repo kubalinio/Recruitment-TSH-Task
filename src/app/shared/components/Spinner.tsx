@@ -1,5 +1,3 @@
-
-
 export function Spinner() {
     return (
         <div className="flex w-full items-center justify-center h-[calc(100vh-320px)] md:h-[calc(100vh-160px)]">
